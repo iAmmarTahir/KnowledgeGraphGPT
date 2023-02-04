@@ -1,4 +1,4 @@
-You are given a prompt. Your task is to generate tuples like (source, relation, target). Add any extra tuples that can be inferred from the existing tuples. Make sure there are always source, relation and target in the tuple.
+You are given a prompt. Extrapolate as many relationships as you can from the prompt and generate tuples like (source, relation, target). Make sure there are always source, relation and target in the tuple.
 Example:
 prompt: John knows React, Golang, and Python. John is good at Software Engineering and Leadership
 tuple: 
