@@ -1,0 +1,10 @@
+You are given a prompt. Your task is to generate tuples like (source, relation, target). Add any extra tuples that can be inferred from the existing tuples. Make sure there are always source, relation and target in the tuple.
+Example:
+prompt: John knows React, Golang, and Python. John is good at Software Engineering and Leadership
+tuple: 
+(John, knows, React); (John, knows, Golang); (John, knows, Python); (John, good_at, Software_Engineering); (John, good_at, Leadership);
+prompt: Bob is Alice's father. Alice has one brother John. 
+tuple: 
+(Bob, father_of, Alice); (John, brother_of, Alice)
+prompt: $prompt
+tuple:
