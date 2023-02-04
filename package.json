@@ -1,6 +1,8 @@
 {
   "name": "knowledge-graph-gpt",
   "version": "0.1.0",
+  "author": {"name": "Ammar Tahir", "email": "ammartahircs@gmail.com", "url": "http://ammar-tahir.com"},
+  "license": "MIT License",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
