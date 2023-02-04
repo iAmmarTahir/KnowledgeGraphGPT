@@ -65,4 +65,13 @@
   text-align: center;
   margin-top: 5px;
   color: #9E9E9E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.github {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+

@@ -11,6 +11,7 @@ import {
 } from "./util";
 import "./App.css";
 import { DEFAULT_PARAMS, requestOptions } from "./constants";
+import GithubLogo from "./github-mark.png";
 
 function App() {
   const [prompt, setPrompt] = useState("");
@@ -120,7 +121,22 @@ function App() {
         </button>
       </div>
       <Graph data={graphState} />
-      <div className="footer">Copyrights © {new Date().getFullYear()}</div>
+      <div className="footer">
+        <p>Copyrights © {new Date().getFullYear()}</p>
+        <a
+          href="https://github.com/iAmmarTahir/KnowledgeGraphGPT"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src={GithubLogo}
+            alt="github"
+            width={20}
+            height={20}
+            className="github"
+          />
+        </a>
+      </div>
     </div>
   );
 }
