@@ -4,8 +4,8 @@ Transform plain text into a visually stunning knowledge graph with GPT-3 technol
 
 ---
 ## Required Verisons
-1. `npm -> v7.19.1`
-2. `node -> v14.17.4`
+1. `npm >= v7.19.1`
+2. `node >= v14.17.4`
 ---
 ## How to run
 1. Open your CLI, and run `npm install`
