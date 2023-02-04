@@ -3,15 +3,13 @@ const nodeStyles = [
     selector: "node",
     style: {
       content: "data(id)",
-      "background-image": "data(image)",
-      "background-fit": "cover",
       "text-valign": "bottom",
       "text-halign": "center",
       "text-wrap": "wrap",
       "background-color": "data(color)",
       "text-overflow-wrap": "whitespace",
-      "border-width": "data(borderWidth)",
-      "border-color": "data(borderColor)",
+      "font-size": "0.5em",
+      "font-family": "Roboto",
     },
   },
   {
@@ -19,6 +17,7 @@ const nodeStyles = [
     style: {
       label: "data(label)",
       "font-size": "0.5em",
+      "font-family": "Roboto",
     },
   },
   {
@@ -28,6 +27,7 @@ const nodeStyles = [
       width: 1,
       "edge-text-rotation": "autorotate",
       "font-size": "0.5em",
+      "font-family": "Roboto",
     },
   },
 ];
@@ -37,10 +37,12 @@ const edgeStyles = [
     style: {
       "curve-style": "bezier",
       "target-arrow-shape": "triangle",
-
       "arrow-scale": 0.5,
       width: 1,
       content: "data(label)",
+      "line-color": "#E0E0E0",
+      "target-arrow-color": "#E0E0E0",
+      "font-family": "Roboto",
     },
   },
 ];

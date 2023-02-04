@@ -1,10 +1,15 @@
 import { ACTIONS } from "./actions";
-import { getDiffEdges, getDiffNodes } from "./util";
+import {
+  colorNodes,
+  generateNodeWeightMap,
+  getDiffEdges,
+  getDiffNodes,
+} from "./util";
 
 export const initialState = {
   nodes: [],
   edges: [],
-  nodesMap: [],
+  nodeWeightMap: {},
 };
 
 export const graphReducer = (state, action) => {
@@ -12,9 +17,20 @@ export const graphReducer = (state, action) => {
     case ACTIONS.ADD_NODES_AND_EDGES:
       const newNodes = getDiffNodes(action.payload.nodes, state.nodes);
       const newEdges = getDiffEdges(action.payload.edges, state.edges);
+      const edges = [...state.edges, ...newEdges];
+      const newNodeWeightMap = generateNodeWeightMap(
+        edges,
+        state.nodeWeightMap
+      );
+      const coloredNodes = colorNodes(
+        [...state.nodes, ...newNodes],
+        newNodeWeightMap
+      );
+
       return {
-        nodes: [...state.nodes, ...newNodes],
-        edges: [...state.edges, ...newEdges],
+        nodes: [...coloredNodes],
+        edges: [...edges],
+        nodeWeightMap: newNodeWeightMap,
       };
     case ACTIONS.CLEAR_GRAPH:
       return initialState;

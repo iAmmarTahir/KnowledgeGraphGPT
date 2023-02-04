@@ -1,3 +1,10 @@
+export const requestOptions = {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
+
 export const LAYOUT_OPTIONS = {
   FCOSE: {
     name: "fcose",
@@ -47,3 +54,15 @@ export const PANZOOM_OPTIONS = {
   zoomOutIcon: "fa fa-minus",
   resetIcon: "fa fa-expand",
 };
+
+export const DEFAULT_PARAMS = {
+  model: "text-davinci-003",
+  temperature: 0.3,
+  max_tokens: 800,
+  top_p: 1,
+  frequency_penalty: 0,
+  presence_penalty: 0,
+};
+
+export const np =
+  " \n(Ammar, knows, React); (Ammar, knows, C++); (Ammar, knows, Python); (Ammar, good_at, Programming)";

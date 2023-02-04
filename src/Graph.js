@@ -39,6 +39,7 @@ const Graph = ({ data }) => {
 
   useEffect(() => {
     createNetwork();
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -47,7 +48,14 @@ const Graph = ({ data }) => {
 
   return (
     <div
-      style={{ height: "85vh", width: "100%", border: "1px solid #111" }}
+      className="graphContainer"
+      style={{
+        height: "70vh",
+        width: "60%",
+        border: "0.01px solid #ccc",
+        marginLeft: "20%",
+        backgroundColor: "#fff",
+      }}
       ref={networkRef}
     ></div>
   );

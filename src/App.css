@@ -1,38 +1,68 @@
-.App {
+.mainContainer {
   text-align: center;
+  padding: 1%;
+  width: 60%;
+  margin-left: 20%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App {
+  background-color: #ECEFF1;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.text {
+  color: #9E9E9E;
+  margin: 5px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  color: #111;
+  font-size: 1.5em;
+  margin-bottom: 5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.promptInput {
+  border: 0.01px solid #ccc;
+  padding: 10px 10px;
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+.keyInput {
+  border: 0.01px solid #ccc;
+  padding: 10px 10px;
+  width: 58%;
+  margin-bottom: 10px; 
+}
+
+.submitButton {
+  background-color: #111;
+  color: #fff;
+  padding: 10px 10px;
+  border: 0.01px solid transparent;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.submitButton:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  opacity: 0.3;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 5px;
+  color: #9E9E9E;
 }
