@@ -1,6 +1,6 @@
 import { useReducer, useState } from "react";
 import Graph from "./Graph";
-import main from "./prompt.txt";
+import main from "./prompt/prompt.main";
 import { graphReducer, initialState } from "./graphReducer";
 import { ACTIONS } from "./actions";
 import {
@@ -33,6 +33,7 @@ function App() {
       .then((res) => res.text())
       .then((text) => text.replace("$prompt", prompt))
       .then((prompt) => {
+        console.info(prompt);
         const params = { ...DEFAULT_PARAMS, prompt: prompt };
         fetch("https://api.openai.com/v1/completions", {
           ...requestOptions,
