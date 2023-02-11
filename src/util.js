@@ -76,6 +76,18 @@ export const cleanTuples = (tuples) => {
   return results;
 };
 
+export const cleanJSONTuples = (data) => {
+  const result = [];
+  data.forEach((elem) => {
+    const temp = [];
+    Object.values(elem).forEach((val) => {
+      temp.push(val);
+    });
+    result.push(temp);
+  });
+  return result;
+};
+
 export const tuplesToGraph = (tuples) => {
   const nodes = [];
   const edges = [];
