@@ -11,7 +11,7 @@ export const LAYOUTS = {
   Circle: "AVSDF",
 };
 
-const ANIMATION_DURATION = 850; // ms
+const ANIMATION_DURATION = 1000; // ms
 const ANIMATION_EASING = "ease-in-sine";
 
 export const LAYOUT_OPTIONS = {

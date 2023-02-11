@@ -24,7 +24,7 @@ const Graph = ({ data, layout }) => {
   const cyRef = useRef(null);
   const createNetwork = () => {
     const cy = new cytoscape({
-      layout: LAYOUT_OPTIONS[layout],
+      layout: LAYOUT_OPTIONS[layout] ?? LAYOUT_OPTIONS.FCOSE,
       container: networkRef.current,
       maxZoom: 1e1,
       elements: { nodes: data.nodes, edges: data.edges },
@@ -36,7 +36,9 @@ const Graph = ({ data, layout }) => {
 
   const updateNetwork = (data) => {
     cyRef.current.json({ elements: { nodes: data.nodes, edges: data.edges } });
-    cyRef.current.layout({ ...LAYOUT_OPTIONS[layout] }).run();
+    cyRef.current
+      .layout({ ...(LAYOUT_OPTIONS[layout] ?? LAYOUT_OPTIONS.FCOSE) })
+      .run();
   };
 
   useEffect(() => {

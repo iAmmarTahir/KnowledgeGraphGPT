@@ -32,7 +32,7 @@ function App() {
     setKey(e.target.value);
   };
 
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState("");
 
   const handleJSONImport = (e) => {
     const fileReader = new FileReader();
@@ -143,7 +143,7 @@ function App() {
           >
             Export JSON
           </button>
-          <label class="custom-file-upload">
+          <label className="custom-file-upload">
             <input
               type="file"
               accept=".json"

@@ -5,7 +5,9 @@ export const LayoutSelector = ({ option, setOptions }) => {
   return (
     <select value={option} onChange={(e) => setOptions(e.target.value)}>
       {Object.keys(LAYOUTS).map((key) => (
-        <option value={LAYOUTS[key]}>{key}</option>
+        <option key={key} value={LAYOUTS[key]}>
+          {key}
+        </option>
       ))}
     </select>
   );
