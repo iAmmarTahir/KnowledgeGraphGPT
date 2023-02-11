@@ -1,7 +1,11 @@
 {
   "name": "knowledge-graph-gpt",
   "version": "0.2.1",
-  "author": {"name": "Ammar Tahir", "email": "ammartahircs@gmail.com", "url": "http://ammar-tahir.com"},
+  "author": {
+    "name": "Ammar Tahir",
+    "email": "ammartahircs@gmail.com",
+    "url": "http://ammar-tahir.com"
+  },
   "license": "MIT License",
   "private": true,
   "dependencies": {
@@ -9,6 +13,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "cytoscape": "^3.23.0",
+    "cytoscape-avsdf": "^1.0.0",
     "cytoscape-dagre": "^2.5.0",
     "cytoscape-fcose": "^2.2.0",
     "cytoscape-panzoom": "^2.5.3",

@@ -3,6 +3,7 @@
   padding: 1%;
   width: 60%;
   margin-left: 20%;
+  background-color: #ECEFF1;
 }
 
 * {
@@ -11,8 +12,12 @@
   box-sizing: border-box;
 }
 
-.App {
+body {
   background-color: #ECEFF1;
+}
+
+.App {
+  
   height: 100vh;
   font-family: 'Roboto', sans-serif;
 }
@@ -32,7 +37,7 @@
 .promptInput {
   border: 0.01px solid #ccc;
   padding: 10px 10px;
-  width: 30%;
+  width: 49%;
   margin-bottom: 10px;
 }
 
@@ -75,3 +80,27 @@
   margin-top: 5px;
 }
 
+.custom-file-upload {
+  background-color: #111;
+  display: inline-block;
+  color: #fff;
+  padding: 9px 10px;
+  margin-left: 5px;
+  border: 0.01px solid transparent;
+  opacity: 0.6;
+  transition: 0.3s;
+  font-size: 0.9em;
+}
+.custom-file-upload:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row-reverse;
+}

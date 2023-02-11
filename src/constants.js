@@ -5,25 +5,56 @@ export const requestOptions = {
   },
 };
 
+export const LAYOUTS = {
+  Simple: "FCOSE",
+  Hierarchical: "DAGRE",
+  Circle: "AVSDF",
+};
+
+const ANIMATION_DURATION = 850; // ms
+const ANIMATION_EASING = "ease-in-sine";
+
 export const LAYOUT_OPTIONS = {
   FCOSE: {
     name: "fcose",
     idealEdgeLength: 200,
     randomize: true,
     nodeDimensionsIncludeLabels: true,
+    animationDuration: ANIMATION_DURATION,
+    animationEasing: ANIMATION_EASING,
   },
   DAGRE: {
     name: "dagre",
-    nodeSep: 200, // the separation between adjacent nodes in the same rank
-    edgeSep: 200, // the separation between adjacent edges in the same rank
-    rankSep: 200, // the separation between each rank in the layout
+    nodeSep: 30, // the separation between adjacent nodes in the same rank
+    edgeSep: 30, // the separation between adjacent edges in the same rank
+    rankSep: 30, // the separation between each rank in the layout
     fit: true,
-    rankDir: "BT",
+    rankDir: "TB",
     animate: true,
+    animationDuration: ANIMATION_DURATION,
+    animationEasing: ANIMATION_EASING,
     minLen: () => {
       return 2;
     },
     nodeDimensionsIncludeLabels: true,
+  },
+  AVSDF: {
+    name: "avsdf",
+    // number of ticks per frame; higher is faster but more jerky
+    refresh: 30,
+    // Whether to fit the network view after when done
+    fit: true,
+    // Padding on fit
+    padding: 10,
+    // Prevent the user grabbing nodes during the layout (usually with animate:true)
+    ungrabifyWhileSimulating: false,
+    // Type of layout animation. The option set is {'during', 'end', false}
+    animate: "end",
+    // Duration for animate:end
+    animationDuration: ANIMATION_DURATION,
+    animationEasing: ANIMATION_EASING,
+    // How apart the nodes are
+    nodeSeparation: 100,
   },
 };
 
