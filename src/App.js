@@ -57,8 +57,11 @@ function App() {
       .then((res) => res.text())
       .then((text) => text.replace("$prompt", prompt))
       .then((prompt) => {
-        const params = { ...DEFAULT_PARAMS, prompt: prompt };
-        fetch("https://api.openai.com/v1/completions", {
+        const params = {
+          ...DEFAULT_PARAMS,
+          messages: [{ role: "system", content: prompt }],
+        };
+        fetch("https://api.openai.com/v1/chat/completions", {
           ...requestOptions,
           headers: {
             ...requestOptions.headers,
@@ -70,7 +73,7 @@ function App() {
           .then((data) => {
             setLoading(false);
             const result = restructureGraph(
-              tuplesToGraph(cleanTuples(data.choices[0].text))
+              tuplesToGraph(cleanTuples(data.choices[0].message.content))
             );
             dispatch({ type: ACTIONS.ADD_NODES_AND_EDGES, payload: result });
           })

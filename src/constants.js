@@ -87,7 +87,7 @@ export const PANZOOM_OPTIONS = {
 };
 
 export const DEFAULT_PARAMS = {
-  model: "text-davinci-003",
+  model: "gpt-4-1106-preview",
   temperature: 0.3,
   max_tokens: 800,
   top_p: 1,
