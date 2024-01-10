@@ -1,6 +1,6 @@
 import { useReducer, useState } from "react";
 import Graph from "./Graph";
-import main from "./prompt/prompt.main";
+import main from "./prompt/prompt.txt";
 import { graphReducer, initialState } from "./graphReducer";
 import { ACTIONS } from "./actions";
 import {
