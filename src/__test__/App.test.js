@@ -12,7 +12,7 @@ test("renders app UI and interacts with key input fields", () => {
   expect(screen.getByText(/KnowledgeGraph GPT/i)).toBeInTheDocument();
 
   // Check for prompt input
-  const promptInput = screen.getByPlaceholderText("Enter your prompt here");
+  const promptInput = screen.getByPlaceholderText("Enter your prompt");
   expect(promptInput).toBeInTheDocument();
 
   // Check for API key input
