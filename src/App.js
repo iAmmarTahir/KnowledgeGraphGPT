@@ -115,7 +115,7 @@ function App() {
           onChange={(e) => handlePromptChange(e)}
           value={prompt}
           className="promptInput"
-          placeholder="Enter your prompt"
+          placeholder="Enter your prompt here"
         />
 
         <button
